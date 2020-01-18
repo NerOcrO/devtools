@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Fonctionnalités developer tools</title>
+<style>
+.wrapper {
+  background: #edf1f2;
+  margin: 1rem;
+  padding: 1rem;
+}
+.basic-22 {
+  background: #edf1ff;
+  border: .5rem solid #000;
+  this-style: doesnt-exist;
+}
+.grid {
+  display: grid;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+}
+.link a:hover {
+  color: red;
+}
+.link a:focus {
+  color: green;
+}
+</style>
+</head>
+<body>
+  <div class="wrapper">Inspecteur - Basique 1/2</div>
+  <div class="wrapper basic-22">Inspecteur - Basique 2/2</div>
+  <div class="wrapper event">Exemple "Event"</div>
+  <div class="wrapper grid">Exemple "Grid"</div>
+  <div class="wrapper flex">Exemple "Flex"</div>
+  <div class="wrapper link"><a href="#">Un lien avec un ":hover" et un ":focus"</a></div>
+  <script>
+    window.onload = () => {
+      document.getElementsByClassName('event')[0].addEventListener('click', () => {
+        console.log('Hello!')
+      })
+    }
+  </script>
+</body>
+</html>
